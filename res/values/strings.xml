@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">La Vieja Blue</string>
+    <string name="dispositivos_vinculados">Dispositivos Vinculados</string>
+    <string name="otros_dispositivos">Otros Dispositivos</string>
+	<string name="buscar_dispositivos">Buscar Dispositivos</string>
+	<string name="no_dispositivos">No hay dispositivos</string>
+	<string name="buscando">Buscando dispositivos</string>
+	<string name="seleccione_dispositivo">Seleccione Dispositivo</string>
+	<string name="enviar">Enviar</string>
+	
+</resources>
