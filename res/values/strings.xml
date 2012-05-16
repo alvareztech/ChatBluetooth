@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- PrincipalActivity -->
+    <string name="no_conectado_dispositivo">No estas conectado a un dispositivo.</string>
+    <string name="conectado">Conectado: </string>
+    <string name="conectando">Conectando... </string>
+    <string name="no_conectado">No conectado</string>
+    <string name="bt_no_activado_cerrando">Bluetooth no activado. Cerrando el ChatBluetooth</string>
+
+    <!-- ServicioChat -->
     <string name="app_name">La Vieja Blue</string>
     <string name="dispositivos_vinculados">Dispositivos Vinculados</string>
     <string name="otros_dispositivos">Otros Dispositivos</string>
-	<string name="buscar_dispositivos">Buscar Dispositivos</string>
-	<string name="no_dispositivos">No hay dispositivos</string>
-	<string name="buscando">Buscando dispositivos</string>
-	<string name="seleccione_dispositivo">Seleccione Dispositivo</string>
-	<string name="enviar">Enviar</string>
-	
+    <string name="buscar_dispositivos">Buscar Dispositivos</string>
+    <string name="no_dispositivos">No hay dispositivos</string>
+    <string name="buscando">Buscando dispositivos</string>
+    <string name="seleccione_dispositivo">Seleccione Dispositivo</string>
+    <string name="enviar">Enviar</string>
+
+    <!-- Menu -->
+    <string name="conectar">Conectar a un dispositivo</string>
+    <string name="descubrible">Hacer descubrible</string>
+
 </resources>

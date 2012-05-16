@@ -20,8 +20,18 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * Esta Activity se presenta como un cuadro de dialogo. En ella se muestan todos
+ * los dispositivos vinculados y los dispositivos detectados en area despues del
+ * descubrimiento. Cuando un dispositivo es elegido por el usuario, la direccion
+ * MAC del dispositivo se envia de vuelta a la PrincipalActivity
+ */
 public class ListaDispositivosActivity extends Activity {
 
+	// Retorna un extra del Intent
+	public static String EXTRA_DIRECCION_DISPOSITIVO = "direccion_dispositivo";
+
+	// Campos miembro
 	private BluetoothAdapter bluetoothAdapter;
 	private ArrayAdapter<String> dispositivosVinculadosArrayAdapter;
 	private ArrayAdapter<String> nuevosDispositivosArrayAdapter;
@@ -35,7 +45,7 @@ public class ListaDispositivosActivity extends Activity {
 																		// progreso
 		setContentView(R.layout.lista_dispositivos);
 
-		// Colocar resultado CANCELADO en caso de que el usuario presion back
+		// Colocar resultado CANCELADO en caso de que el usuario presione back
 		setResult(Activity.RESULT_CANCELED);
 
 		// Iniciar el boton para la busqueda de dispositivos
@@ -146,7 +156,7 @@ public class ListaDispositivosActivity extends Activity {
 
 			// Crear un Intent resultado y incluir la direccion MAC
 			Intent intent = new Intent();
-			intent.putExtra("direccion_dispositivo", direccion);
+			intent.putExtra(EXTRA_DIRECCION_DISPOSITIVO, direccion);
 
 			// Colocar el resultado y finalizar esta Activity
 			setResult(Activity.RESULT_OK, intent);
@@ -178,7 +188,7 @@ public class ListaDispositivosActivity extends Activity {
 				if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(accion)) {
 					setProgressBarIndeterminateVisibility(false);
 					setTitle(R.string.seleccione_dispositivo);
-					if (nuevosDispositivosArrayAdapter.getCount() > 0) {
+					if (nuevosDispositivosArrayAdapter.getCount() == 0) {
 						String noDispositivos = getResources().getText(
 								R.string.no_dispositivos).toString();
 						dispositivosVinculadosArrayAdapter.add(noDispositivos);
